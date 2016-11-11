@@ -52,7 +52,15 @@ elementFormDefault="qualified">
 									 </xsd:restriction>
 									</xsd:simpleType>	
 								 </xsd:element>					
-								 <xsd:element name="tipusClient" type="xsd:string"></xsd:element>							
+								 <xsd:element name="tipusClient">
+								  <xsd:simpleType>
+								    <xsd:restriction base="xsd:string">
+									<xsd:enumeration value="Premium"/>
+									<xsd:enumeration value="Habitual"/>
+									<xsd:enumeration value="Ocasional"/>
+								    </xsd:restriction>
+								  </xsd:simpleType>
+								</xsd:element>
 								 <xsd:element name="lloguer" maxOccurs="unbounded">
                                                  	<xsd:complexType>
                                                       	<xsd:all>
