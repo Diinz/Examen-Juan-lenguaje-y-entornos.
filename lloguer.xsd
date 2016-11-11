@@ -37,7 +37,14 @@ elementFormDefault="qualified">
 								   		 </xsd:simpleContent>
 								 	 </xsd:complexType>
 								</xsd:element>
-                                                 <xsd:element name="telefon" type="xsd:string"></xsd:element>
+								<xsd:element name="telefon">
+								  <xsd:simpleType>
+								    <xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="971230000"/>
+									<xsd:maxInclusive value="971239999"/>
+								    </xsd:restriction>
+								  </xsd:simpleType>
+								 </xsd:element>
 								 <xsd:element name="email" type="xsd:string"></xsd:element>							
 								 <xsd:element name="tipusClient" type="xsd:string"></xsd:element>							
 								 <xsd:element name="lloguer" maxOccurs="unbounded">
