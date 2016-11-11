@@ -45,7 +45,13 @@ elementFormDefault="qualified">
 								    </xsd:restriction>
 								  </xsd:simpleType>
 								 </xsd:element>
-								 <xsd:element name="email" type="xsd:string"></xsd:element>							
+								 <xsd:element name="email">
+									<xsd:simpleType>
+									 <xsd:restriction base="xsd:string">
+									  <xsd:pattern value="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"/>
+									 </xsd:restriction>
+									</xsd:simpleType>	
+								 </xsd:element>					
 								 <xsd:element name="tipusClient" type="xsd:string"></xsd:element>							
 								 <xsd:element name="lloguer" maxOccurs="unbounded">
                                                  	<xsd:complexType>
